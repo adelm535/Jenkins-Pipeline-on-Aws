@@ -10,7 +10,7 @@ pipeline{
                 steps {
                     retry(3){
                         withAWS(region:'us-west-2', credentials:'aws-static'){
-                        s3Upload(file:'index.html', bucket:'vivek.tech.jenkins', path:'')
+                        s3Upload(file:'index.html', bucket:'udacity-adelm', path:'')
                     }                             
                 }
             }
