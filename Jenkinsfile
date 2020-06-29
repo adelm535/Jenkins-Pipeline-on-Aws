@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Upload to AWS') {
             steps {
-                withAWS(region:'us-west-2', credentials:'Aws-Static') {
+                withAWS(region:'us-west-2', credentials:'f57a13b3-08a2-49b3-b82e-72224a67b773') {
                     s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'udacity-adelm')
             }
         }
